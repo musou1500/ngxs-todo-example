@@ -1,9 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
-  <task-form (submit)="add($event)"></task-form>
-  <task-list
-    [tasks]="tasks"
-    (done)="done($event)"
-    *ngIf="tasks$ | async as tasks"></task-list>
-
+  <section class="section">
+    <task-form (submit)="add($event)"></task-form>
+    <task-list
+      [tasks]="tasks"
+      (done)="done($event)"
+      *ngIf="tasks$ | async as tasks"></task-list>
+  </section>
 </div>
