@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let task of tasks">
+    <label class="checkbox">
+      <input type="checkbox" [disabled]="task.done" (change)="done.emit(task.id)" [checked]="task.done">
+      {{ task.title }}
+    </label>
+  </li>
+</ul>
